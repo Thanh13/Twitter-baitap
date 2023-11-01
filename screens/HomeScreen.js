@@ -13,7 +13,7 @@ const HomeScreen = ({ navigation }) => {
           style={{ height: 30, width: 30, borderRadius:30, marginLeft:15 }}
           source={{
             uri:
-              'https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg' }}
+              'https://i33.ntcdntempv26.com/data/images/9169/1073723/001-801faf1.jpg?data=nht' }}
         />
       ),
       headerTitle: ()=>(
@@ -24,7 +24,15 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
+      <ScrollView>
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+      </ScrollView>
     </View>
   );
 };
