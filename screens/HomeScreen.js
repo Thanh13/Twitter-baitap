@@ -2,7 +2,8 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React, { useEffect } from 'react';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import TweetCard from '../components/TweetCard';
-import DummyData from '../mock/DummyData';
+import { DummyData } from '../mock/DummyData';
+
 
 const HomeScreen = ({ navigation }) => {
   useEffect(() => {
@@ -10,13 +11,14 @@ const HomeScreen = ({ navigation }) => {
       headerTitleAlign: 'center',
       headerLeft: () => (
         <Image
-          style={{ height: 30, width: 30, borderRadius:30, marginLeft:15 }}
+          style={{ height: 30, width: 30, borderRadius: 30, marginLeft: 15 }}
           source={{
             uri:
-              'https://i33.ntcdntempv26.com/data/images/9169/1073723/001-801faf1.jpg?data=nht' }}
+              'https://i33.ntcdntempv26.com/data/images/9169/1073723/001-801faf1.jpg?data=nht'
+          }}
         />
       ),
-      headerTitle: ()=>(
+      headerTitle: () => (
         <FontAwesome5 name='twitter' size={25} color={'#00acee'} />
       )
     });
@@ -25,13 +27,12 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
+        {DummyData.map(dat => <TweetCard
+           key={dat.id} id={dat.id} name={dat.name} verified={dat.verified} 
+           tweet={dat.tweet} image={dat.image} prof={dat.prof}  like={dat.like}
+           rt={dat.rt} reply={dat.reply} time={dat.time}
+          />
+        )}
       </ScrollView>
     </View>
   );
@@ -40,8 +41,8 @@ const HomeScreen = ({ navigation }) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor:'black'
+  container: {
+    flex: 1,
+    backgroundColor: 'black'
   }
 });
