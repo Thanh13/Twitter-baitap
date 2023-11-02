@@ -4,22 +4,22 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-const TweetCard = () => {
+const TweetCard = ({id,name,verified,tweet,image,prof,time,like,rt,reply}) => {
   return (
     <View style={styles.container}>
       <View style={styles.leftCont}>
           <Image 
             style={{height:30, width:30 , borderRadius:30}}
-            source={{uri:'https://i33.ntcdntempv26.com/data/images/9169/1073723/001-801faf1.jpg?data=nht'}}
+            source={{uri:prof}}
           />
       </View>
       <View style={styles.rightCont}>
         <View style={styles.topCont}>
           <View style={styles.nameCont}>
-            <Text style={styles.nameText}>Thanh</Text>
+            <Text style={styles.nameText}>{name}</Text>
             <MaterialIcon name='verified' color='white' size={25}/>
-            <Text style={styles.idText}>@ThanhLe21</Text>
-            <Text style={styles.idText}>- 2h</Text>
+            <Text style={styles.idText}>@{id}</Text>
+            <Text style={styles.idText}>- {time}</Text>
           </View>
           <View>
             <MaterialCommunityIcons
@@ -31,36 +31,36 @@ const TweetCard = () => {
         </View>
         <View style={styles.tweetCont}>
           <Text style={styles.tweetText}>
-            ABCDEFG
+            {tweet}
           </Text>
-          <Image 
+          {image && <Image 
             style={{
               height:300,
               width:'100%',
               borderRadius:10,
               marginTop:10
             }}
-            source={{uri:'https://i33.ntcdntempv26.com/data/images/9169/1073723/001-801faf1.jpg?data=nht'}}
-          />
+            source={{uri:image}}
+          />}
         </View>
         <View style={styles.actionCont}> 
             <View style={styles.iconCont}>
               <MaterialCommunityIcons 
                 name='message-reply-outline' color='gray' size={20}
               />
-              <Text style={styles.idText}>25</Text>
+              <Text style={styles.idText}>{reply}</Text>
             </View>
             <View style={styles.iconCont}>
               <AntDesign 
                 name='retweet' color='gray' size={20}
               />
-              <Text style={styles.idText}>5</Text>
+              <Text style={styles.idText}>{rt}</Text>
             </View>
             <View style={styles.iconCont}>
               <MaterialCommunityIcons 
                 name='heart-outline' color='gray' size={20}
               />
-              <Text style={styles.idText}>215</Text>
+              <Text style={styles.idText}>{like}</Text>
             </View>
             <View style={styles.iconCont}>
               <MaterialCommunityIcons 
