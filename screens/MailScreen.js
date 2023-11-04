@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { StyleSheet, Text, View,Image } from 'react-native'
 import React,{useEffect} from 'react'
 import MailCard from '../components/MailCard'
@@ -47,3 +48,19 @@ const styles = StyleSheet.create({
     backgroundColor:"black"
   }
 })
+=======
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+
+const MailScreen = () => {
+  return (
+    <View>
+      <Text>MailScreen</Text>
+    </View>
+  )
+}
+
+export default MailScreen
+
+const styles = StyleSheet.create({})
+>>>>>>> 73b65281f58a699e999157a3ff605091e12753df
