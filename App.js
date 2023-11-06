@@ -8,7 +8,7 @@ import HomeScreen from './screens/HomeScreen'
 import MailScreen from './screens/MailScreen'
 import NotificationScreen from './screens/NotificationScreen'
 import SearchScreen from './screens/SearchScreen'
-import SpacesScreen from './screens/SpacesScreen'
+
 
 
 
@@ -48,13 +48,7 @@ export default function App() {
             )
           }}
         />
-        <Tab.Screen name='Spaces' component={SpacesScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome name='microphone' size={size} color={color} />
-            )
-          }}
-        />
+
           <Tab.Screen name='Notification' component={NotificationScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
