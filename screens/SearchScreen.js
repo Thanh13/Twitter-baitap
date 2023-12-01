@@ -4,7 +4,7 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import TrendingCard from "../components/TrendingCard"
 import { TrendingData } from '../mock/DummyData';
 import { DummyData } from '../mock/DummyData';
-import SearchProfCard from '../components/searchProfCard';
+import SearchProfCard from '../components/NotificationCard';
 
 const ScreenWidth = Dimensions.get('window').width;
 

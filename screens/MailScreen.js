@@ -11,7 +11,7 @@ const MailScreen = ({navigation}) => {
       headerLeft: () => (
         <Image
             style={{height:30,width:30,borderRadius:30,marginLeft:15}}
-            source={{uri:"https://lh3.googleusercontent.com/ogw/AOh-ky2cWsAILwBTX3_R494N5SH1ZlXSfUd5xOx93gTJNg=s32-c-mo"}}
+            source={{uri:"https://i33.ntcdntempv26.com/data/images/9169/1073723/001-801faf1.jpg?data=nht"}}
         />
     ),headerRight:() =>(
       <MaterialIcons name='settings' color={"white"} size={25} style={{marginRight:15}} />
